@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Tools - By Jawad Ahmed | GlobalToolKit</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial}
+body{background:#f5f7fb;color:#222}
+header{background:linear-gradient(135deg,#0f172a,#2563eb);color:#fff;padding:22px;text-align:center}
+.container{max-width:1100px;margin:auto;padding:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.card{background:#fff;border-radius:14px;padding:16px;box-shadow:0 6px 18px rgba(0,0,0,.07)}
+input{width:100%;padding:10px;border:1px solid #cbd5e1;border-radius:8px;margin:6px 0 10px}
+button{width:100%;background:#2563eb;color:#fff;border:0;padding:11px;border-radius:8px;font-weight:700;cursor:pointer}
+.result{background:#f1f5f9;padding:10px;border-radius:8px;margin-top:10px;font-weight:700;min-height:38px}
+.footer{text-align:center;padding:22px;color:#64748b;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+<h1>🌍 World Tools - GlobalToolKit</h1>
+<p>By Jawad Ahmed Rajput | Free Tools for Every Country</p>
+</header>
+<div class="container">
+<div class="grid">
+<div class="card"><h3>🎂 Age Calculator</h3><input type="date" id="dob"><button onclick="let b=new Date(dob.value),n=new Date(),a=n.getFullYear()-b.getFullYear();if(n.getMonth()<b.getMonth()||n.getMonth()==b.getMonth()&&n.getDate()<b.getDate())a--;ageRes.innerText='You are '+a+' years old'">Calculate</button><div class="result" id="ageRes"></div></div>
+<div class="card"><h3>💪 BMI Calculator</h3><input type="number" id="height" placeholder="Height cm"><input type="number" id="weight" placeholder="Weight kg"><button onclick="let h=height.value/100,w=weight.value,bm=(w/(h*h)).toFixed(1);bmiRes.innerText='BMI: '+bm">Calculate BMI</button><div class="result" id="bmiRes"></div></div>
+<div class="card"><h3>🚗 Car Commission Calculator</h3><input type="number" id="buyPrice" placeholder="Buying $"><input type="number" id="sellPrice" placeholder="Selling $"><button onclick="let p=sellPrice.value-buyPrice.value;carRes.innerText='Profit: $'+p+' | Commission (10%): $'+(p*0.1).toFixed(2)">Calculate Profit</button><div class="result" id="carRes"></div></div>
+</div>
+</div>
+<div class="footer">© 2026 GlobalToolKit by Jawad Ahmed | jawadahmedrajput1234@gmail.com</div>
+</body>
+</html>
